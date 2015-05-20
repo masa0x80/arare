@@ -7,7 +7,7 @@ module Arare
     desc 'list', 'List up gem licenses.'
     def list(project_path)
       arare = Arare::List.new(project_path, options[:license_db], options[:install_path])
-      arare.list
+      puts arare.list.join("\n")
     end
   end
 end
